@@ -1,4 +1,4 @@
-# fashion-mnist-classification
+# Fashion-mnist-classification
 
 Bu proje, Aygaz Yapay Zekaya Giriş kursu kapsamında, Fashion MNIST veri setini kullanarak gri tonlamalı görüntüleri 10 kategoriye ayırmak için bir derin öğrenme modeli oluşturmayı ve değerlendirmeyi amaçlar. Doğruluk, F1 skoru, geri çağırma ve kesinlik metrikleri ile model performansı ölçülmüştür.
 
@@ -44,6 +44,31 @@ Bu projenin amacı, Fashion MNIST veri setini kullanarak derin öğrenme modelle
 4. **Daha Fazla Veri Toplama:**
    - Ek veri setlerinin kullanılması.
    - Farklı kaynaklardan veri toplanarak veri çeşitliliğinin artırılması.
+
+## Teknik Detaylar:
+
+1. Veri Seti: Fashion MNIST veri seti, 28x28 boyutunda gri tonlamalı 70,000 görüntü içerir. Toplamda 10 farklı kategori bulunmaktadır.
+
+2. Model Oluşturma:
+   - Derin öğrenme modeli Sequential API kullanılarak oluşturulmuştur.
+   - Giriş katmanı olarak 28x28 boyutundaki görüntüler düzleştirilmiştir.
+   - İki tam bağlantılı gizli katman eklenmiştir (128 ve 64 nöronlu).
+   - Çıkış katmanı olarak 10 sınıflı softmax aktivasyonlu bir katman eklenmiştir.
+
+3. Model Eğitimi:
+   - Optimizasyon yöntemi olarak Adam optimizer kullanılmıştır.
+   - Kayıp fonksiyonu olarak sparse categorical crossentropy kullanılmıştır.
+   - Eğitim, 10 epoch boyunca gerçekleştirilmiştir.
+
+4. Model Değerlendirme:
+   - Eğitim ve test doğrulukları, F1 skoru, geri çağırma ve kesinlik metrikleri hesaplanmıştır.
+   - Karmaşıklık matrisi ile modelin sınıflandırma performansı görselleştirilmiştir.
+
+5. Gelecekteki Geliştirme Önerileri:
+   - Daha karmaşık modellerin (örneğin, CNN tabanlı modeller) denenmesi.
+   - Veri artırma tekniklerinin kullanılması.
+   - Hiperparametre optimizasyonunun daha kapsamlı şekilde yapılması.
+
 
 ## Nasıl Çalıştırılır
 
